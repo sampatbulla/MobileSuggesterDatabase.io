@@ -1,0 +1,81 @@
+.con{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin:20px;
+}
+button{
+	width: 300px;
+	height: 200px;
+	border-color: white;
+	border-width: 10px;
+}
+
+body{
+	background-image: url(allbrand.jpg);
+	background-size: cover;
+}
+
+h2{
+	color: black;
+	font-size: 50px;
+}
+h1{
+ color: white;
+
+}
+.b1{
+	background-image: url(samsung.png);
+	background-size: cover;
+	margin: 20px;
+}
+.b2{
+	background-image: url(samsung.png);
+	background-size: cover;
+	margin: 20px;
+}
+.b3{
+	background-image: url(samsung.png);
+	background-size: cover;
+margin: 20px;
+}
+.b4{
+	background-image: url(samsung.png);
+	background-size: cover;
+	margin: 20px;
+}
+.b5{
+	background-image: url(samsung.png);
+	background-size: cover;
+	margin: 20px;
+}
+.b6{
+	background-image: url(samsung.png);
+	background-size: cover;
+	margin: 20px;
+}
+.b7{
+	background-image: url(samsung.png);
+	background-size: cover;
+	margin: 20px;
+}
+.b8{
+	background-image: url(samsung.png);
+	background-size: cover;
+	margin: 20px;
+}
+.b9{
+	background-image: url(samsung.png);
+	background-size: cover;
+	margin: 20px;
+}
+.b10{
+	background-image: url(lenovo.png);
+	background-size: cover;
+	margin: 20px;
+}
+.b11{
+	background-image: url(samsung.png);
+	background-size: cover;
+	margin: 20px;
+}

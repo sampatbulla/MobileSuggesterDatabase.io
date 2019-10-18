@@ -1,0 +1,46 @@
+
+.attribute::after,.attribute2::after{
+	
+	color: rgb(255,0,0);
+	/*float: left;*/
+	white-space: pre;
+	content: "  *";
+	float:right;
+}
+.main::before{
+	color:red;
+	content:"* required";
+	white-space: pre;
+	margin:auto;
+}
+.main{
+	width: 1000px;
+	margin:auto;
+}
+.attribute2{
+	
+	float:right;
+	
+}
+.attribute,.attribute2{
+	width: 400px;
+	text-align: left;
+	font-weight: bold;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 45% ;
+}
+input[type="file"] {
+  padding: 12px 20px;
+  cursor: pointer;
+  margin-left: 40% ;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,157 @@
+.smart {
+    display: flex;
+    justify-content: center;
+    size: 300px;
+   	margin-top: 20px;
+
+}
+
+body{
+	background-image: url(back.jpg);
+	background-repeat:;
+  	background-size: cover;
+}
+
+.bt{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.bt button {
+	position:relative;
+	width:14.28%;
+	float: left;
+}
+/*.phonefinder{
+	border-color: blue;
+	height: 100px;
+	width: 100%; 
+	font-family:sans-serif;
+}*/
+
+.phonefinder ul{
+	position:absolute;
+	width: 100%;
+	height:30%;
+	background: #ccc;
+	margin:0;
+	padding:0;
+}
+.phonefinder ul li{
+	list-style:none;
+	position: relative;
+	width:14.28%;
+	height: 100%;
+	border-right:1px solid #000;
+	float: left;
+	box-sizing: border-box;
+	transition: 0.1s;
+	text-align: center;
+}
+
+.phonefinder ul li:nth-child(1)
+{
+	background: url(https://upload.wikimedia.org/wikipedia/commons/e/ee/Indian_Rupee_symbol.svg);
+	background-size: 120px 120px;
+	background-repeat: no-repeat;
+
+	background-position: center;
+}
+.phonefinder ul li:nth-child(2)
+{
+	background: url(https://image.flaticon.com/icons/svg/25/25345.svg);
+	background-size: 120px 120px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.phonefinder ul li:nth-child(3)
+{
+	background: url();
+	background-size: 120px 120px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.phonefinder ul li:nth-child(4)
+{
+	background: url(https://image.flaticon.com/icons/svg/1383/1383655.svg);
+	background-size: 120px 100px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.phonefinder ul li:nth-child(5)
+{
+	background: url(https://image.flaticon.com/icons/svg/149/149100.svg);
+	background-size: 120px 100px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.phonefinder ul li:nth-child(6)
+{
+	background: url(https://image.flaticon.com/icons/svg/149/149793.svg);
+	background-size: 120px 100px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.phonefinder ul li:nth-child(7)
+{
+	background: url(https://image.flaticon.com/icons/svg/30/30986.svg);
+	background-size: 120px 100px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.phonefinder ul:hover li{
+	width: 10%;
+}
+.phonefinder ul li:hover{
+	width: 40%;
+}
+.phonefinder ul li .content{
+	position:absolute;
+	left:0; 
+	width:100%;
+	font-size: 30%;
+	color:#fff;
+	opacity:0;
+}
+.phonefinder ul li:hover .content{
+	bottom:0;
+	font-size: 100%;
+	transition-delay: .5s;
+	transition: .5s; 
+	opacity: 1;
+
+}
+
+#content1{
+	background-image: url(1.jpg);
+	background-size: cover;
+}
+
+#content2{
+	background-image: url(2.jpg);
+	background-size: cover;
+}
+#content3{
+	background-image: url(3.jpg);
+	background-size: cover;
+}
+#content4{
+	background-image: url(4.jpg);
+	background-size: cover;
+}
+#content5{
+	background-image: url(5.jpg);
+	background-size: cover;
+}
+#content6{
+	background-image: url(6.jpg);
+	background-size: cover;
+}
+#content7{
+	background-image: url(7.jpg);
+	background-size: cover;
+}
+
+.content{
+	background:black;	
+}
