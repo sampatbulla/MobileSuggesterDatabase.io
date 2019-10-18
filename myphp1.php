@@ -139,7 +139,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo 
         "<p>".
-        "<img src='image/".$row["S_id"]."'><br>".
+        "<img src='".htmlspecialchars(dirname($_SERVER['REQUEST_URI']))."/image/".$row["S_id"]."'><br>".
         "Name: " . $row["Smartphone Name"]."<br>".
         "Release year: ".$row["Year"]."<br>".
         "RAM: ".$row["Ram"]."<br>".
