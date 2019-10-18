@@ -2,10 +2,9 @@
 .attribute::after,.attribute2::after{
 	
 	color: rgb(255,0,0);
-	/*float: left;*/
+	
 	white-space: pre;
 	content: "  *";
-	float:right;
 }
 .main::before{
 	color:red;
