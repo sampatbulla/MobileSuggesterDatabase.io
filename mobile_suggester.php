@@ -163,9 +163,12 @@
 	<div id="sidebar">
 	<div class ="main_filter">
 		<form   id ="mobile_suggester_form" method="post" action="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"  target="suggester">
-			<div id="reset">
+			
+			<div id="reset" >
+			<label onclick="search()">
 			<input class="btn btn-primary" type="reset"  value="Reset">
-			</div>
+			</label></div>
+			<div oninput="search()" >
 			<select name="priority" id="select">
 	 			<option value="alpha">a-z</option>
 	  			<option value="lower">cost lower to higher</option>
@@ -173,6 +176,7 @@
 	  			<option value="latest">latest</option>
 	  		
 			</select>
+			</div>
 			<label name= "filter" id="search">		
 				<div name = "Search by name" >
 					Search by name:<input type="text" onkeyup = "search()" name="mobile_name_search" placeholder="Mobile name" value="">
