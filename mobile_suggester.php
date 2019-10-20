@@ -23,11 +23,25 @@
 		
 	}
 
-	.battery{
+	#sidebar{
+		height: 100%;
+		width: 25%;
+
+	}
+	#battery{
 		position: absolute;
-		background-color: red;
+		color: white;
+		background-color: #151719;
 		box-shadow: 0 20px 8px rgba(64 ,64 ,64, .5);
-		padding: 10px 40px;
+		padding: 10px 1%;
+	}
+	#b{
+		display: flex;
+	flex-wrap:;
+	justify-content: ;
+	}
+	iframe{
+		float: right;
 	}
 
 	</style>
@@ -87,6 +101,7 @@
 	    </li>
 	  </ul>
 	</nav>
+	<div id="b">
 	<div id="sidebar">
 	<div class ="main_filter">
 		<form   id ="mobile_suggester_form" method="post" action="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"  target="suggester">
@@ -304,6 +319,7 @@
 	</div>
 	</div>
 
-	<iframe name = "suggester" style="border:none;height:20000px;width:100%" src="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"></iframe>
+	<iframe name = "suggester" style="border:none;height:20000px;width:75%" src="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"></iframe>
+	</div>
 </body>
 </html>
