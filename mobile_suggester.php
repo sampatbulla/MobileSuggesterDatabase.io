@@ -19,10 +19,14 @@
 	</script>
 	<style>
 		.error {color: #FF0001;}
-	
-
+	#nav{
+		border-bottom: 2px solid black;
+	}
+	#navbar-example2{
+		border-bottom: 2px solid black;
+	}
 	#sidebar{
-		width: 14.5%;
+		width: 15%;
 		scroll-behavior: auto;
 		border-right:  5px solid ;
 		max-height: 600px;
@@ -31,14 +35,18 @@
 	}
 	#b{
 		display: flex;
-		flex-wrap:;
-	
 	}
 	#reset{
-		padding-left:  20px;
-		padding-right: 20px;
+		position: relative ;
+		justify-content: center;
+		color: white;
+		background-color: #151719;
+		box-shadow: 0 10px 8px rgba(64 ,64 ,64, .5);
+		padding: 10px 55px;
+	}
+	#select{
+		padding: 10px;
 		margin: 10px;
-		margin-left: 45px;
 	}
 	#search{
 		background-color: #151719;
@@ -80,7 +88,16 @@
 		padding: 10px 35px;
 	}
 	#border{
-		border-bottom:  2px solid white; 
+		border-top:  2px solid white; 
+		border-bottom: 2px solid white;
+		padding: 0px 20px 0px 20px;
+	}
+	#connect_more{
+		padding: 10px 35px;
+		margin:5px;
+	}
+	p{
+		padding: 5px;
 	}
 	iframe{
 		float: right;
@@ -88,7 +105,6 @@
 
 	</style>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="maincss.css">
 	<title>Mobile Suggester : Find the Phone that suits your needs</title>
 </head>
 <body>
@@ -96,7 +112,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
 	  <a class="navbar-brand" href=""><h2>Mobile Suggester</h2></a>
 	  <h5>Unbox the best</h5>
 	</nav>
@@ -111,7 +127,7 @@
 	$ui = $os = $no_rear = $connect = $screen_size = [];
 	$main_camera = $front_camera = 2;		
 	?>
-	<nav id="navbar-example2" class="navbar navbar-light bg-light">
+	<nav id="navbar-example2" class="navbar navbar-light bg-light" >
 	  <a class="navbar-brand" href="#">Filter</a>
 	  <ul class="nav nav-pills">
 	    <li class="nav-item">
@@ -147,7 +163,16 @@
 	<div id="sidebar">
 	<div class ="main_filter">
 		<form   id ="mobile_suggester_form" method="post" action="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"  target="suggester">
-			<button type="reset" id="reset">reset</button>
+			<div id="reset">
+			<input class="btn btn-primary" type="reset"  value="Reset">
+			</div>
+			<select name="priority" id="select">
+	 			<option value="alpha">a-z</option>
+	  			<option value="lower">cost lower to higher</option>
+	  			<option value="higher">cost higher to lower</option>
+	  			<option value="latest">latest</option>
+	  		
+			</select>
 			<label name= "filter" id="search">		
 				<div name = "Search by name" >
 					Search by name:<input type="text" onkeyup = "search()" name="mobile_name_search" placeholder="Mobile name" value="">
@@ -304,7 +329,7 @@
 				<input type="radio" name="main_camera_input" value = "20">20 MP & above 
 				</label><br>
 				<label>
-				<input type="radio" name="main_camera_input" value = "48">48 MP 
+				<input type="radio" name="main_camera_input" value = "48">48 MP & above
 				</label><br>
 				
 			</div>
@@ -327,8 +352,8 @@
 			</div>
 			</label><br>
 
-			<label name= "filter">
-			<label name = "filter_heading" id="connect">Connectivity & More</label><br>
+			<label name= "filter" id="connect_more">
+			<label name = "filter_heading" id="connect"><p> Connectivity & More</p></label><br>
 			<div name = "Connectivity">
 
 				<label>
@@ -349,13 +374,7 @@
 
 			</div>
 			</label> <br>
-			<select name="priority">
-	 			<option value="alpha">a-z</option>
-	  			<option value="lower">cost lower to higher</option>
-	  			<option value="higher">cost higher to lower</option>
-	  			<option value="latest">latest</option>
-	  		
-			</select>
+			
 		</div>
 		</form>	
 	</div>
