@@ -265,7 +265,7 @@
 				<label>
 				<input type="checkbox" name="ui_input[]" value = "color">Color 
 				</label><br>
-				<label>
+				<label> 
 				<input type="checkbox" name="ui_input[]" value = "ios">IOS 
 				</label><br>
 				
