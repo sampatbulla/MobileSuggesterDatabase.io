@@ -42,16 +42,18 @@
 		color: white;
 		background-color: #151719;
 		box-shadow: 0 10px 8px rgba(64 ,64 ,64, .5);
-		padding: 10px 55px;
+		padding: 10px 70px;
 	}
 	#select{
 		padding: 10px;
 		margin: 10px;
+		margin-left: 30px;
 	}
 	#search{
 		background-color: #151719;
 		color: white;
-		padding-left: 10px;
+		padding-top: 10px;
+		padding-left: 30px;
 		box-shadow: 0 10px 8px rgba(64 ,64 ,64, .5);
 	}
 	#price{
@@ -63,7 +65,7 @@
 		color: white;
 		background-color: #151719;
 		box-shadow: 0 10px 8px rgba(64 ,64 ,64, .5);
-		padding: 10px 35px;
+		padding: 20px 60px;
 	}
 	#op{
 		padding: 10px 35px;
@@ -74,7 +76,7 @@
 		color: white;
 		background-color: #151719;
 		box-shadow: 0 10px 8px rgba(64 ,64 ,64, .5);
-		padding: 10px 35px;
+		padding: 10px 60px;
 	}
 	#screen{
 		padding: 10px 35px;
