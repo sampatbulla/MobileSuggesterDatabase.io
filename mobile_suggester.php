@@ -19,26 +19,68 @@
 	</script>
 	<style>
 		.error {color: #FF0001;}
-	*{
-		
-	}
+	
 
 	#sidebar{
-		height: 100%;
-		width: 25%;
-
-	}
-	#battery{
-		position: absolute;
-		color: white;
-		background-color: #151719;
-		box-shadow: 0 20px 8px rgba(64 ,64 ,64, .5);
-		padding: 10px 1%;
+		width: 14.5%;
+		scroll-behavior: auto;
+		border-right:  5px solid ;
+		max-height: 600px;
+		overflow: scroll;
+		scroll-behavior: auto;
 	}
 	#b{
 		display: flex;
-	flex-wrap:;
-	justify-content: ;
+		flex-wrap:;
+	
+	}
+	#reset{
+		padding-left:  20px;
+		padding-right: 20px;
+		margin: 10px;
+		margin-left: 45px;
+	}
+	#search{
+		background-color: #151719;
+		color: white;
+		padding-left: 10px;
+		box-shadow: 0 10px 8px rgba(64 ,64 ,64, .5);
+	}
+	#price{
+		padding-left: 10px;
+	}
+	#battery{
+		position: relative ;
+		justify-content: center;
+		color: white;
+		background-color: #151719;
+		box-shadow: 0 10px 8px rgba(64 ,64 ,64, .5);
+		padding: 10px 35px;
+	}
+	#op{
+		padding: 10px 35px;
+	}
+	#ui{
+		position: relative ;
+		justify-content: center;
+		color: white;
+		background-color: #151719;
+		box-shadow: 0 10px 8px rgba(64 ,64 ,64, .5);
+		padding: 10px 35px;
+	}
+	#screen{
+		padding: 10px 35px;
+	}
+	#camera{
+		position: relative ;
+		justify-content: center;
+		color: white;
+		background-color: #151719;
+		box-shadow: 0 10px 8px rgba(64 ,64 ,64, .5);
+		padding: 10px 35px;
+	}
+	#border{
+		border-bottom:  2px solid white; 
 	}
 	iframe{
 		float: right;
@@ -105,25 +147,25 @@
 	<div id="sidebar">
 	<div class ="main_filter">
 		<form   id ="mobile_suggester_form" method="post" action="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"  target="suggester">
-			
-			<label name= "filter">		
+			<button type="reset" id="reset">reset</button>
+			<label name= "filter" id="search">		
 				<div name = "Search by name" >
 					Search by name:<input type="text" onkeyup = "search()" name="mobile_name_search" placeholder="Mobile name" value="">
 				</div><br>
 			</label><br>
-			<label name= "filter">
+			<label name= "filter" id="price">
 				<div name = "Price limit">
-					Rs.<input type="text"  onkeyup = "verify_and_search()" name="lower_price_limit" value="<?php echo $lower_bound;?>">
-					 - Rs.<input type="text" onkeyup = "verify_and_search()" name="higher_price_limit" value="<?php echo $upper_bound;?>">
+					Price <br> Rs.<input type="text"  onkeyup = "verify_and_search()" name="lower_price_limit" value="<?php echo $lower_bound;?>"><br>
+					  Rs.<input type="text" onkeyup = "verify_and_search()" name="higher_price_limit" value="<?php echo $upper_bound;?>">
 					 <span class = "error" id= "invalid_input"></span><br>
 				</div>
 			</label>
 
 			<div oninput="search()" >
 
-			<label name= "filter">		
+			<label name= "filter" id="battery">		
 			<label name = "filter_heading" >Battery</label>
-			<div name = "Battery" id="battery">
+			<div name = "Battery" >
 				
 				<label>
 					<input type="radio" name="battery_input"  value = 1500>1500 mAh & above 
@@ -147,7 +189,7 @@
 			</div>
 			</label><br>
 			
-			<label name= "filter">		
+			<label name= "filter" id="op">		
 			<label name = "filter_heading" id="OperatingSystem">Operating System</label>
 			<div name = "OS"> 
 				
@@ -161,7 +203,7 @@
 			</div>
 			</label><br>
 			
-			<label name= "filter">
+			<label name= "filter" id="ui">
 			<label name = "filter_heading" id="userinterface">User Interface</label>
 			<div name = "User Interface"> 
 				
@@ -199,7 +241,7 @@
 			</div>
 			</label><br>
 			
-			<label name= "filter">
+			<label name= "filter" id="screen">
 			<label name = "filter_heading" id="screensize">Screen Size</label>
 			<div name = "Screen Size"> 
 				
@@ -221,9 +263,9 @@
 			</div>
 			</label><br>
 
-			<label name= "filter">
+			<label name= "filter" id="camera">
 			<label name = "filter_heading" id="camera">Camera</label>
-			<div name = "No. of Rear Cameras"> 
+			<div name = "No. of Rear Cameras" id="border"> 
 				
 				<label>
 				<label name = "filter_sub_heading">Number of Rear Cameras</label><br>
@@ -243,7 +285,7 @@
 				</label><br>
 				
 			</div>
-			<div name = "Main Camera">
+			<div name = "Main Camera" id="border">
 				<label name = "filter_sub_heading">Main Camera Resolution</label> <br>
 				
 				<label>
@@ -266,7 +308,7 @@
 				</label><br>
 				
 			</div>
-			<div name = "Front Camera">
+			<div name = "Front Camera" id="border">
 				<label name = "filter_sub_heading">Front Camera Resolution</label><br> 
 		
 				<label>
@@ -319,7 +361,7 @@
 	</div>
 	</div>
 
-	<iframe name = "suggester" style="border:none;height:20000px;width:75%" src="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"></iframe>
+	<iframe name = "suggester" style="border:none;height:20000px;width:85.5%" src="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"></iframe>
 	</div>
 </body>
 </html>
