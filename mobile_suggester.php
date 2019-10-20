@@ -19,6 +19,17 @@
 	</script>
 	<style>
 		.error {color: #FF0001;}
+	*{
+		
+	}
+
+	.battery{
+		position: absolute;
+		background-color: red;
+		box-shadow: 0 20px 8px rgba(64 ,64 ,64, .5);
+		padding: 10px 40px;
+	}
+
 	</style>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="maincss.css">
@@ -76,7 +87,7 @@
 	    </li>
 	  </ul>
 	</nav>
-
+	<div id="sidebar">
 	<div class ="main_filter">
 		<form   id ="mobile_suggester_form" method="post" action="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"  target="suggester">
 			
@@ -96,8 +107,8 @@
 			<div oninput="search()" >
 
 			<label name= "filter">		
-			<label name = "filter_heading" id="Battery">Battery</label>
-			<div name = "Battery">
+			<label name = "filter_heading" >Battery</label>
+			<div name = "Battery" id="battery">
 				
 				<label>
 					<input type="radio" name="battery_input"  value = 1500>1500 mAh & above 
@@ -290,6 +301,7 @@
 			</select>
 		</div>
 		</form>	
+	</div>
 	</div>
 
 	<iframe name = "suggester" style="border:none;height:20000px;width:100%" src="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"></iframe>

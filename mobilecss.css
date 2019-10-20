@@ -1,18 +1,11 @@
-#sidenav{
-	width: 260px;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16),
-				0 3px 6px rgba(0,0,0,0.23);
+*{
+	margin:0px;
+	padding: 0px;
 }
-.leftmenuinnerinner{
-	height: 100%;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	padding: 20px;
-}
-#leftmenuinner{
-	overflow-y: scroll;
-}
-.w3-light-grey{
-	color: #000;
-	background-color: #f1f1f1;
+
+.battery{
+	position: absolute;
+	background-color: #fafafa;
+	box-shadow: 0 20px 8px rgba(64 ,64 ,64, .5);
+	padding: 10px 40px;
 }
