@@ -26,10 +26,10 @@
 		border-bottom: 2px solid black;
 	}
 	#sidebar{
-		width: 15%;
+		width: 20%;
 		scroll-behavior: auto;
 		border-right:  5px solid ;
-		max-height: 600px;
+		max-height: 570px;
 		overflow: scroll;
 		scroll-behavior: auto;
 	}
@@ -380,7 +380,7 @@
 	</div>
 	</div>
 
-	<iframe name = "suggester" style="border:none;height:20000px;width:85.5%" src="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"></iframe>
+	<iframe name = "suggester" style="border:none;height:570px;width:85.5%" src="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"></iframe>
 	</div>
 </body>
 </html>

@@ -66,7 +66,7 @@ body{
 }
 .phonefinder ul li:nth-child(3)
 {
-	background: url();
+	background: url(https://image.flaticon.com/icons/svg/1813/1813131.svg);
 	background-size: 120px 120px;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -106,20 +106,19 @@ body{
 	width: 40%;
 }
 .phonefinder ul li .content{
-	position:absolute;
-	left:0; 
+	position:middle;
+	left:0;
 	width:100%;
-	font-size: 30%;
+	font-size: 50%;
 	color:#fff;
 	opacity:0;
 }
 .phonefinder ul li:hover .content{
 	bottom:0;
-	font-size: 100%;
-	transition-delay: .5s;
+	font-size: 130%;
+	transition-delay: 0.5s;
 	transition: .5s; 
-	opacity: 1;
-
+	opacity: 0.85;
 }
 
 #content1{
@@ -153,5 +152,7 @@ body{
 }
 
 .content{
-	background:black;	
+	background:black;
+	width:100%;
+	height:100%;
 }

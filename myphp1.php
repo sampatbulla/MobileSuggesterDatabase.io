@@ -132,7 +132,9 @@ function check($param) {
   	return "No";
   }
 }
+
 $result = $conn->query($sql);
+if(!empty($result))
 if ($result->num_rows > 0) {
     // output data of each row
 	echo $result->num_rows." results found.";
