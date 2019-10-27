@@ -6,7 +6,13 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-	<h2><?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI']));?></h2>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	  	<nav class="" id="nav">
+	  		<a class="navbar-brand" href=""><h2>OneMobile</h2></a>
+	  		<h5></h5>
+		</nav>
 	<form method="POST" enctype="multipart/form-data" action="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/inputdb.php");?>">
 
 <!-- Name: APPLE 11
@@ -25,10 +31,10 @@ Rear: 12
 Front: 8
 Price: 64000
 Wifi: Yes   Bluetooth: Yes   NFC: Yes   Fingerprint Scanner: No   Face Unlock: Yes -->
-
+		
 		<div class = "main">
 			<br>
-			<br>
+			<br></div>
  			<label class="attribute">Name: <br><input type="text" name="Name" placeholder="Smart Phone Name" required>  </label>
 			<label class="attribute2">Year: <br><input type="text" name="Release_year" placeholder="Release Year" required>  </label><br>
 			<label class="attribute">RAM: <br><input type="text" name="RAM" placeholder="in GBs" required>  </label>
@@ -65,7 +71,6 @@ Wifi: Yes   Bluetooth: Yes   NFC: Yes   Fingerprint Scanner: No   Face Unlock: Y
 			</div>
 			<br>
 			<input type="file" id ="fileToUpload" name="fileToUpload" accept="image/*" required="">
-		</div> 
 			<div><input type="submit" name="submit"></div>
 	</form>
 	

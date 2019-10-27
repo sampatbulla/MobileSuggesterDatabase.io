@@ -14,17 +14,20 @@ body{
 	margin:auto;
 }
 .main{
-	width: 1000px;
+	width: 100%;
 	margin:auto;
 }
 .attribute2{
-	float:right;
+	width: 50%;
+	float: right;
+	padding-left: 10%;
 }
-.attribute,.attribute2{
-	width: 400px;
-	text-align: left;
-	font-weight: bold;
+.attribute{
+	width: 50%;
+	float: left;
+	padding-left: 10%;
 }
+
 input[type=submit] {
   background-color: #4CAF50;
   color: white;
@@ -41,4 +44,14 @@ input[type="file"] {
 }
 input[type=submit]:hover {
   background-color: #45a049;
+}
+#nav{
+	background-color: #151719;
+}
+h2{
+	padding-left: 10px;
+	color: white;
+}
+label{
+	color: white;
 }
