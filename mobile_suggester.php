@@ -19,7 +19,7 @@
 	</script>
 	<style>
 		.error {color: #FF0001;}
-	#nav{
+	#nav{ 
 		border-bottom: 2px solid black;
 	}
 	#navbar-example2{

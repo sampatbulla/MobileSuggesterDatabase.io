@@ -1,8 +1,9 @@
-
+body{
+	background-image: url(input.jpg);
+	background-size: cover; 
+}
 .attribute::after,.attribute2::after{
-	
 	color: rgb(255,0,0);
-	
 	white-space: pre;
 	content: "  *";
 }
@@ -17,9 +18,7 @@
 	margin:auto;
 }
 .attribute2{
-	
 	float:right;
-	
 }
 .attribute,.attribute2{
 	width: 400px;

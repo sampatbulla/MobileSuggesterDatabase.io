@@ -4,10 +4,9 @@
 	<title>Insert new Smart Phone</title>
 	<link rel="stylesheet" type="text/css" href="inputcss.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 </head>
 <body>
-	<h2>Get a new Smart Phone set<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI']));?></h2>
+	<h2><?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI']));?></h2>
 	<form method="POST" enctype="multipart/form-data" action="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/inputdb.php");?>">
 
 <!-- Name: APPLE 11
