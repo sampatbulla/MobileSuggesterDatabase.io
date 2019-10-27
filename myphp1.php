@@ -162,7 +162,7 @@ if ($result->num_rows > 0) {
         "NFC: ".check($row["NFC"])." &nbsp&nbsp".
         "Fingerprint Scanner: ".check($row["FPS"])." &nbsp&nbsp".
         "Face Unlock: ".check($row["FU"])."<br>".
-        "</p><hr>";
+        "</p><br>";
     }
 } else {
     echo "No results found!";

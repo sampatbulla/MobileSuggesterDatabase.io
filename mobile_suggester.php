@@ -21,6 +21,8 @@
 		.error {color: #FF0001;}
 	#nav{ 
 		border-bottom: 2px solid black;
+		background-color: #111311;
+		color: white;
 	}
 	#navbar-example2{
 		border-bottom: 2px solid black;
@@ -114,7 +116,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+	<nav  id="nav">
 	  <a class="navbar-brand" href=""><h2>Mobile Suggester</h2></a>
 	  <h5>Unbox the best</h5>
 	</nav>
