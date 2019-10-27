@@ -35,35 +35,39 @@ Wifi: Yes   Bluetooth: Yes   NFC: Yes   Fingerprint Scanner: No   Face Unlock: Y
 		<div class = "main">
 			<br>
 			<br></div>
+			<div id="input1">
  			<label class="attribute">Name: <br><input type="text" name="Name" placeholder="Smart Phone Name" required>  </label>
-			<label class="attribute2">Year: <br><input type="text" name="Release_year" placeholder="Release Year" required>  </label><br>
+			<label class="attribute">Year: <br><input type="text" name="Release_year" placeholder="Release Year" required>  </label><br>
 			<label class="attribute">RAM: <br><input type="text" name="RAM" placeholder="in GBs" required>  </label>
-			<label class="attribute2">Internal Memory: <br><input type="text" name="Internal_Memory" placeholder="in GBs" required>  </label><br>
+			<label class="attribute">Internal Memory: <br><input type="text" name="Internal_Memory" placeholder="in GBs" required>  </label><br>
 			<label class="attribute">Battery: <br><input type="text" name="Battery" placeholder="in mAh" required>  </label>
-			<label class="attribute2">Disp Size: <br><input type="text" name="Disp_Size" placeholder="in inches" required>  </label><br>
-			<label class="attribute2">UI: <br><input type="text" name="UI" placeholder="" required>  </label>
-			<label class="attribute">OS: <br><input type="text" name="OS" placeholder="" required>  </label> 
-			<label class="attribute">Processor Name: <br><input type="text" name="Proc_Name" placeholder="" required>  </label>
+			<label class="attribute">Disp Size: <br><input type="text" name="Disp_Size" placeholder="in inches" required>  </label><br>
+			<label class="attribute">UI: <br><input type="text" name="UI" placeholder="" required>  </label>
+			</div>
+			<div id="input2">
+			<label class="attribute">OS: <br><input type="text" name="OS" placeholder="" required>  </label>
+			<label class="attribute2>Processor Name: <br><input type="text" name="Proc_Name" placeholder="" required>  </label>
 			<label class="attribute2">Processor Brand: <br><input type="text" name="Proc_Brand" placeholder="" required>  </label><br>
  			<label class="attribute">Type of Display: <br><input type="text" name="Type_of_Display" placeholder="" required>  </label>
 			<label class="attribute2">No of Cameras: <br><input type="text" name="No_of_Cameras" placeholder="" required>  </label><br>
-			<label class="attribute">Rear Camera Resolution: <br><input type="text" name="Rear" placeholder="in Megapixels" required>  </label>
+			<label class="attribute2">Rear Camera Resolution: <br><input type="text" name="Rear" placeholder="in Megapixels" required>  </label>
 			<label class="attribute2">Front Camera Resolution: <br><input type="text" name="Front" placeholder="in Megapixels" required>  </label><br>
-			<label class="attribute">Price: <br><input type="text" name="Price" placeholder="in Rs." required>  </label>
-			<div class = "Connectivity">
+			<label class="attribute2">Price: <br><input type="text" name="Price" placeholder="in Rs." required>  </label>
+			</div>
+			<div class="Connectivity" id="Connectivity" >
 
-				<label>
+				<label id="connect">
 				<input type="checkbox" name="conn_input[]" value = "Wifi">Wifi 
 				</label>
-				<label>
+				<label id="connect">
 				<input type="checkbox" name="conn_input[]" value = "Bluetooth">Bluetooth 
 				</label>
-				<label>
+				<label id="connect">
 				<input type="checkbox" name="conn_input[]" value = "NFC">NFC 
 				</label>
-				<label>
+				<label id="connect">
 				<input type="checkbox" name="conn_input[]" value = "Fingerprint_scanner">Fingerprint Scanner 
-				</label>
+				</label id="connect">
 				<label>
 				<input type="checkbox" name="conn_input[]" value = "Face_unlock">Face Unlock 
 				</label>
@@ -71,6 +75,7 @@ Wifi: Yes   Bluetooth: Yes   NFC: Yes   Fingerprint Scanner: No   Face Unlock: Y
 			</div>
 			<br>
 			<input type="file" id ="fileToUpload" name="fileToUpload" accept="image/*" required="">
+			<br><br><br>
 			<div><input type="submit" name="submit"></div>
 	</form>
 	
