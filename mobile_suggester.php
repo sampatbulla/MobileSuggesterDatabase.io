@@ -88,7 +88,7 @@
 		justify-content: center;
 		color: white;
 		background-color: #151719;
-		box-shadow: 0 10px 8px rgba(64 ,64 ,64, .5);
+		
 		padding: 10px 35px;
 	}
 	#border{
@@ -169,7 +169,7 @@
 		<form   id ="mobile_suggester_form" method="post" action="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"  target="suggester">
 			
 			<div id="reset" >
-			<label onclick="search()">
+			<label onclick="search(),verify_and_search()" >
 			<input class="btn btn-primary" type="reset"  value="Reset">
 			</label></div>
 			<div oninput="search()" >
