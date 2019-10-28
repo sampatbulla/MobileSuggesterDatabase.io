@@ -7,9 +7,9 @@ $battery = 1000;
 $ui = $os = $no_rear = $connect = $screen_size = [];
 $main_camera = $front_camera = 2;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $mobile_name_search = test_input($_POST["mobile_name_search"]);
-  $lower_bound = test_input($_POST["lower_price_limit"]);
-  $upper_bound = test_input($_POST["higher_price_limit"]);
+  if(!empty($_POST["mobile_name_search"]))$mobile_name_search = test_input($_POST["mobile_name_search"]);
+  if(!empty($_POST["lower_price_limit"]))$lower_bound = test_input($_POST["lower_price_limit"]);
+  if(!empty($_POST["higher_price_limit"]))$upper_bound = test_input($_POST["higher_price_limit"]);
   if(!empty($_POST["battery_input"]))$battery = test_input($_POST["battery_input"]);
   if(!empty($_POST["os_input"])) $os = $_POST["os_input"];
   if(!empty($_POST["ui_input"])) $ui = $_POST["ui_input"];

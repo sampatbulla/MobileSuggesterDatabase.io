@@ -7,6 +7,10 @@ body{
 	background-image: url(coding.jpg);
 	background-size: cover;
 }
+h1{
+	color:rgb(255,255,255);
+	text-align: center;
+}
 nav{
 	background-color: black;
 	width: 100%;

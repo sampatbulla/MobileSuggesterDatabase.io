@@ -31,7 +31,7 @@
 		width: 20%;
 		scroll-behavior: auto;
 		border-right:  5px solid ;
-		max-height: 570px;
+		max-height: 550px;
 		overflow: scroll;
 		scroll-behavior: auto;
 	}
@@ -135,7 +135,7 @@
 	  <a class="navbar-brand" href="#">Filter</a>
 	  <ul class="nav nav-pills">
 	    <li class="nav-item">
-	      <a class="nav-link" href="#Battery" >Battery</a>
+	      <a class="nav-link" href="#battery" >Battery</a>
 	    </li>
 	    <li class="nav-item">
 	      <a class="nav-link" href="#OperatingSystem">Operating System</a>
@@ -388,7 +388,7 @@
 	</div>
 	</div>
 
-	<iframe name = "suggester" style="border:none;height:570px;width:85.5%" src="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"></iframe>
+	<iframe name = "suggester" style="border:none;max-height:550px;width:85.5%" src="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"></iframe>
 	</div>
 </body>
 </html>

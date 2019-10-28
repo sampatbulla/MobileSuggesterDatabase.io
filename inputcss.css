@@ -1,6 +1,8 @@
 body{
 	background-image: url(input.jpg);
-	background-size: cover; 
+	background-size: cover;
+
+
 }
 .attribute::after,.attribute2::after{
 	color: rgb(255,0,0);
@@ -16,10 +18,12 @@ body{
 .main{
 	width: 100%;
 	margin-left: 50%;
+
 }
 #input2{
 	width: 50%;
 	float: right;
+
 }
 #input1{
 	width: 50%;
@@ -27,11 +31,18 @@ body{
 }
 .attribute{
 	float: center;
-	padding-left: 40%;	
+	margin-left: 40%;
+	color: rgb(0,0,0);
+	font-size: 20px;
+	background-color: rgb(255,255,255,0.4);
+	background-blend-mode: all;	
 }
 .attribute2{
 	float: center;
-	padding-left: 40%;
+	margin-left: 40%;
+	color: rgb(0,0,0);
+	font-size: 20px;
+	background-color: rgb(255,255,255,0.4);
 }
 input[type=submit] {
   background-color: #4CAF50;
@@ -45,7 +56,7 @@ input[type=submit] {
 input[type="file"] {
   padding: 12px 20px;
   cursor: pointer;
-  margin-left: 40% ;
+  margin-left: 43% ;
   border-style: none;
   border-radius: 2px; 
 }
