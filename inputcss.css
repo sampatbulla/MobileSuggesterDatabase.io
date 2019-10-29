@@ -33,16 +33,16 @@ body{
 	float: center;
 	margin-left: 40%;
 	color: rgb(0,0,0);
-	font-size: 20px;
-	background-color: rgb(255,255,255,0.4);
+	font-size: 16px;
+	background-color: rgb(189, 164, 245,0.4);
 	background-blend-mode: all;	
 }
 .attribute2{
 	float: center;
 	margin-left: 40%;
 	color: rgb(0,0,0);
-	font-size: 20px;
-	background-color: rgb(255,255,255,0.4);
+	font-size: 16px;
+	background-color: rgb(153, 238, 242,0.4);
 }
 input[type=submit] {
   background-color: #4CAF50;
@@ -51,7 +51,7 @@ input[type=submit] {
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  margin-left: 45% ;
+  margin-left: 50% ;
 }
 input[type="file"] {
   padding: 12px 20px;
@@ -63,6 +63,9 @@ input[type="file"] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
+input[type="number"]{
+  width:83%;
+}
 #nav{
 	background-color: #151719;
 }
@@ -72,11 +75,16 @@ h2{
 }
 label{
 	color: white;
-	padding-top: 10px;
+	padding: 15px;
+	width: 40%;
+	border-radius: 30px; 
 }
 .Connectivity{
-	padding-left: 25%;
+	padding-left: 30%;
+	float: left;
+	width: 120%;
 }
 #connect{
 	padding-right: 50px;
+	width:auto;
 }

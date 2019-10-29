@@ -13,7 +13,7 @@
 	  		<a class="navbar-brand" href="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/");?>"><h2>OneMobile</h2></a>
 	  		<h5></h5>
 		</nav>
-	<form method="POST" enctype="multipart/form-data" action="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/inputdb.php");?>">
+	<form method="POST" enctype="multipart/form-data" action="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/inputdb.php");?>" autocomplete ="on" >
 
 <!-- Name: APPLE 11
 Release_year: 2019
@@ -36,23 +36,44 @@ Wifi: Yes   Bluetooth: Yes   NFC: Yes   Fingerprint Scanner: No   Face Unlock: Y
 			<br>
 			<br></div>
 			<div id="input1">
- 			<label class="attribute">Name: <br><input type="text" name="Name" placeholder="Smart Phone Name" required>  </label>
-			<label class="attribute">Year: <br><input type="text" name="Release_year" placeholder="Release Year" required>  </label><br>
-			<label class="attribute">RAM: <br><input type="text" name="RAM" placeholder="in GBs" required>  </label>
-			<label class="attribute">Internal Memory: <br><input type="text" name="Internal_Memory" placeholder="in GBs" required>  </label><br>
-			<label class="attribute">Battery: <br><input type="text" name="Battery" placeholder="in mAh" required>  </label>
+ 			<label class="attribute">Name: <br><input type="text" name="Name" placeholder="Smart Phone Name" required maxlength ="20">  </label>
+
+			<label class="attribute">RAM: <br><input type="number" name="RAM" placeholder="in GBs" min="1" max="16" required>  </label>
+			
+			<label class="attribute">UI: <br><input type="text" name="UI" placeholder="" required maxlength="18">  </label>
+			<label class="attribute">Processor Name: <br><input type="text" name="Proc_Name" placeholder="" required maxlength="15">  </label>
+			
+			
 			<label class="attribute">Disp Size: <br><input type="text" name="Disp_Size" placeholder="in inches" required>  </label><br>
-			<label class="attribute">UI: <br><input type="text" name="UI" placeholder="" required>  </label>
+			<label class="attribute">Battery: <br><input type="number" name="Battery" placeholder="in mAh" required min="1000" max="5000">  </label>
+			<label class="attribute">Rear Camera Resolution: <br><input type="number" name="Rear" placeholder="in Megapixels" required min="1" max="128">  </label>
+			<label class="attribute">Price: <br><input type="number" name="Price" placeholder="in Rs." required min="100" max="300000">  </label>
 			</div>
+
 			<div id="input2">
-			<label class="attribute">OS: <br><input type="text" name="OS" placeholder="" required>  </label>
-			<label class="attribute2>Processor Name: <br><input type="text" name="Proc_Name" placeholder="" required>  </label>
-			<label class="attribute2">Processor Brand: <br><input type="text" name="Proc_Brand" placeholder="" required>  </label><br>
- 			<label class="attribute">Type of Display: <br><input type="text" name="Type_of_Display" placeholder="" required>  </label>
-			<label class="attribute2">No of Cameras: <br><input type="text" name="No_of_Cameras" placeholder="" required>  </label><br>
-			<label class="attribute2">Rear Camera Resolution: <br><input type="text" name="Rear" placeholder="in Megapixels" required>  </label>
-			<label class="attribute2">Front Camera Resolution: <br><input type="text" name="Front" placeholder="in Megapixels" required>  </label><br>
-			<label class="attribute2">Price: <br><input type="text" name="Price" placeholder="in Rs." required>  </label>
+			<label class="attribute2">Year: <br><input type="number" name="Release_year" placeholder="Release Year"  min="1990" max="2019" required>  </label><br>
+			<label class="attribute2">Internal Memory: <br><input list="Internal_Memory" name="Internal_Memory" placeholder="in GBs" required >
+			<datalist id="Internal_Memory">
+ 			 	<option value="8">
+ 				<option value="16">
+  				<option value="32">
+ 			 	<option value="64">
+  				<option value="128">
+  				<option value="256">
+  				<option value="512">
+  				<option value="1024">
+  				<option value="2048">
+			</datalist>
+
+			  </label><br>
+			<label class="attribute2">OS: <br><input type="text" name="OS" placeholder="" required maxlength="10">  </label>
+			
+			<label class="attribute2">Processor Brand: <br><input type="text" name="Proc_Brand" placeholder="" required maxlength="15">  </label><br>
+ 			<label class="attribute2">Type of Display: <br><input type="text" name="Type_of_Display" placeholder="" required maxlength="15">  </label>
+			<label class="attribute2">No of Cameras: <br><input type="number" name="No_of_Cameras" placeholder="" required min="1" max="10">  </label><br>
+			
+			<label class="attribute2">Front Camera Resolution: <br><input type="number" name="Front" placeholder="in Megapixels" required min="1" max="128">  </label><br>
+			
 			</div>
 			<div class="Connectivity" id="Connectivity" >
 

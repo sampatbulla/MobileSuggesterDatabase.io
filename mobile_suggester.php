@@ -166,7 +166,7 @@
 	<div id="b">
 	<div id="sidebar">
 	<div class ="main_filter">
-		<form   id ="mobile_suggester_form" method="post" action="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"  target="suggester">
+		<form   id ="mobile_suggester_form" method="post" action="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"  target="suggester" autocomplete="off">
 			
 			<div id="reset" >
 			<label onclick="search(),verify_and_search()" >
