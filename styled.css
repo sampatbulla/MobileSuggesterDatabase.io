@@ -12,7 +12,23 @@ body{
 	background-clip: content-box;
 
 }
-
+h1{
+    color: #f35626;
+    background-image: linear-gradient(92deg, #f35626 0%,#feab3a 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hue 60s infinite linear;
+  }
+  @keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}
 .bt{
 	display: flex;
 	flex-wrap: wrap;
