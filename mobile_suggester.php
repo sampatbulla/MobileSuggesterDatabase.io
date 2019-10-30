@@ -27,6 +27,23 @@
 	#navbar-example2{
 		border-bottom: 2px solid black;
 	}
+	h2{
+    color: #f35626;
+    background-image: linear-gradient(92deg, #f35626 0%,#feab3a 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: hue 60s infinite linear;
+  }
+  @keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}
 	#sidebar{
 		width: 20%;
 		scroll-behavior: auto;
