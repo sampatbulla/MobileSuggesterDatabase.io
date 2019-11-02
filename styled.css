@@ -161,7 +161,9 @@ body{
 	padding-top: 350px;
 	color: "Red";
 	font-size: 2em;
-	height: 1000px;
+	height: 800px;
+	padding-left: 20px;
+	padding-right: 10px;
 }
 #tab{
 	padding-left: 600px;
