@@ -137,11 +137,11 @@ $result = $conn->query($sql);
 if(!empty($result))
 if ($result->num_rows > 0) {
     // output data of each row
-	echo $result->num_rows." results found.";
+	echo "<p style='color:white; background:blue;'>".$result->num_rows." results found.</p>";
     while($row = $result->fetch_assoc()) {
         echo 
-        "<p>".
-        "<img src='".htmlspecialchars(dirname($_SERVER['REQUEST_URI']))."/image/".$row["S_id"]."'><br>".
+        "<p style='margin:0 0 0 0;padding:0 0 0 0;'>".
+        "<img style='float:left;padding-left:10px;padding-top:60px;' src='".htmlspecialchars(dirname($_SERVER['REQUEST_URI']))."/image/".$row["S_id"]."'><p style='padding-left:200px;background:black; color:white;padding-top:10px;padding-bottom:10px;'>".
         "Name: " . $row["Smartphone Name"]."<br>".
         "Release year: ".$row["Year"]."<br>".
         "RAM: ".$row["Ram"]."<br>".
@@ -162,7 +162,7 @@ if ($result->num_rows > 0) {
         "NFC: ".check($row["NFC"])." &nbsp&nbsp".
         "Fingerprint Scanner: ".check($row["FPS"])." &nbsp&nbsp".
         "Face Unlock: ".check($row["FU"])."<br>".
-        "</p><br><hr>";
+        "</p></p><br><hr>";
     }
 } else {
     echo "No results found!";
