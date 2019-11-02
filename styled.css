@@ -1,34 +1,15 @@
 .smart {
     display: flex;
     justify-content: center;
-    size: 300px;
-   	margin-top: 200px;
-
+    margin-top: 100px;
 }
-
 body{
 	background: url(back.jpg) no-repeat center fixed;
 	background-size: 100% 100%;
 	background-clip: content-box;
 
 }
-h1{
-    color: #f35626;
-    background-image: linear-gradient(92deg, #f35626 0%,#feab3a 100%);
-    -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: hue 60s infinite linear;
-  }
-  @keyframes hue {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  
-  to {
-    filter: hue-rotate(-360deg);
-  }
-}
+
 .bt{
 	display: flex;
 	flex-wrap: wrap;

@@ -1,7 +1,7 @@
 body{
 	background-image: url(input.jpg);
 	background-size: cover;
-
+	scroll-behavior: none;
 
 }
 .attribute::after,.attribute2::after{
@@ -16,9 +16,6 @@ body{
 	margin:auto;
 }
 .main{
-	width: 100%;
-	margin-left: 50%;
-
 }
 #input2{
 	width: 50%;
@@ -82,7 +79,7 @@ label{
 .Connectivity{
 	padding-left: 30%;
 	float: left;
-	width: 120%;
+	width: 100%;
 }
 #connect{
 	padding-right: 50px;
