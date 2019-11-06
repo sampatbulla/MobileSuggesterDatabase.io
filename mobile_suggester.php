@@ -33,7 +33,7 @@
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: hue 60s infinite linear;
+    animation: hue 500s infinite linear;
   }
   @keyframes hue {
   from {
