@@ -19,6 +19,9 @@
 	</script>
 	<style>
 		.error {color: #FF0001;}
+		body{
+			height: 100%;
+		}
 	#nav{ 
 		border-bottom: 2px solid black;
 		background-color: #111311;
@@ -54,6 +57,7 @@
 	}
 	#b{
 		display: flex;
+		height:100%;
 	}
 	#reset{
 		position: relative ;
@@ -212,7 +216,6 @@
 			</label>
 
 			<div oninput="search()" >
-
 			<label name= "filter" id="battery">		
 			<label name = "filter_heading" >Battery</label>
 			<div name = "Battery" >
