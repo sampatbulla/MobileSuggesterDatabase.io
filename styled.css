@@ -4,10 +4,8 @@
     margin-top: 100px;
 }
 body{
-	background: url(back.jpg) no-repeat center fixed;
-	background-size: 100% 100%;
-	background-clip: content-box;
-
+	background: url(back.jpg) no-repeat center;
+	background-size: cover;
 }
 
 h1{
@@ -34,6 +32,11 @@ h1{
 	justify-content: center;
 
 }
+#navbar{
+	position: -webkit-sticky; /* Safari */
+  	position: sticky;
+  	top: 0;
+}
 .bt button {
 	position:relative;
 	width:14.28%;
@@ -49,7 +52,7 @@ h1{
 .phonefinder ul{
 	position:absolute;
 	width: 100%;
-	height:200px;
+	height:250px;
 	background: #ccc;
 	margin:0;
 	padding:0;
@@ -177,10 +180,13 @@ h1{
 	padding-top: 350px;
 	color: "Red";
 	font-size: 2em;
-	height: 800px;
+	height: 1000px;
 	padding-left: 20px;
 	padding-right: 10px;
 }
 #tab{
 	padding-left: 600px;
+}
+#dev{
+
 }

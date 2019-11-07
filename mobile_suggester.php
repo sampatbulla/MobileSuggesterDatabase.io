@@ -36,7 +36,7 @@
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: hue 500s infinite linear;
+    animation: hue 50s infinite linear;
   }
   @keyframes hue {
   from {
@@ -51,7 +51,7 @@
 		width: 20%;
 		scroll-behavior: auto;
 		border-right:  5px solid ;
-		max-height: 550px;
+		max-height: 600px;
 		overflow: scroll;
 		scroll-behavior: auto;
 	}
