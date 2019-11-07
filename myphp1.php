@@ -144,9 +144,9 @@ if ($result->num_rows > 0) {
         "<img style='float:left;padding-left:10px;padding-top:60px;' src='".htmlspecialchars(dirname($_SERVER['REQUEST_URI']))."/image/".$row["S_id"]."'><p style='padding-left:200px;background:#151719; color:white;padding-top:10px;padding-bottom:10px;'>".
         "Name: " . $row["Smartphone Name"]."<br>".
         "Release year: ".$row["Year"]."<br>".
-        "RAM: ".$row["Ram"]."<br>".
-        "Internal Memory: ".$row["Storage"]."<br>".
-        "Battery: ".$row["Battery"]."<br>".
+        "RAM: ".$row["Ram"]." GB<br>".
+        "Internal Memory: ".$row["Storage"]." GB<br>".
+        "Battery: ".$row["Battery"]." mAH<br>".
         "UI: ".$row["UI"]."<br>".
         "OS: ".$row["OS"]."<br>".
         "Proc Name: ".$row["Proc Name"]."<br>".
@@ -154,9 +154,9 @@ if ($result->num_rows > 0) {
         "Disp Size: ".$row["Disp Size"]."<br>".
         "Type of Display: ".$row["Type of Display"]."<br>".
         "No of Cameras: ".$row["No of Cameras"]."<br>".
-        "Rear: ".$row["Rear"]."<br>".
-        "Front: ".$row["Front"]."<br>".
-        "Price: ".$row["Price"]."<br>".
+        "Rear: ".$row["Rear"]." MP<br>".
+        "Front: ".$row["Front"]." MP<br>".
+        "Price:Rs ".$row["Price"]."<br>".
         "Wifi: ".check($row["Wifi"])."  &nbsp&nbsp".//&nbsp adds extra space in html
         "Bluetooth: ".check($row["Bluetooth"])." &nbsp&nbsp".
         "NFC: ".check($row["NFC"])." &nbsp&nbsp".
