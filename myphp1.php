@@ -151,12 +151,12 @@ if ($result->num_rows > 0) {
         "OS: ".$row["OS"]."<br>".
         "Proc Name: ".$row["Proc Name"]."<br>".
         "Proc Brand: ".$row["Proc Brand"]."<br>".
-        "Disp Size: ".$row["Disp Size"]."<br>".
+        "Disp Size: ".$row["Disp Size"]." inches<br>".
         "Type of Display: ".$row["Type of Display"]."<br>".
         "No of Cameras: ".$row["No of Cameras"]."<br>".
         "Rear: ".$row["Rear"]." MP<br>".
         "Front: ".$row["Front"]." MP<br>".
-        "Price:Rs ".$row["Price"]."<br>".
+        "Price:Rs. ".$row["Price"]."<br>".
         "Wifi: ".check($row["Wifi"])."  &nbsp&nbsp".//&nbsp adds extra space in html
         "Bluetooth: ".check($row["Bluetooth"])." &nbsp&nbsp".
         "NFC: ".check($row["NFC"])." &nbsp&nbsp".
