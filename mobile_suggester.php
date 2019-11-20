@@ -52,7 +52,7 @@
 		border-right:  5px solid ;
 		max-height: 600px;
 		overflow: scroll;
-		min-width: 250px;
+		min-width: 280px;
 		width:250px;	
 	}
 	#b{
