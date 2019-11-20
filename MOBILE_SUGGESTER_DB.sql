@@ -389,8 +389,8 @@ CREATE TABLE `SMARTPHONE` (
 --
 
 INSERT INTO `SMARTPHONE` (`S_id`, `Smartphone_name`, `Price`, `Ram`, `Storage`, `Release_year`, `Battery`, `Processor_id`, `Soft_id`, `Cn_id`, `Disp_id`) VALUES
-(24, ' APPLE 11', 64000, 6, 512, 2019, 2800, 52, 9, 2, 26),
-(26, ' PIXEL 3', 54000, 6, 512, 2018, 3300, 2, 3, 1, 26),
+(24, 'APPLE 11', 64000, 6, 512, 2019, 2800, 52, 9, 2, 26),
+(26, 'PIXEL 3', 54000, 6, 512, 2018, 3300, 2, 3, 1, 26),
 (25, 'APPLE 11 PRO', 84000, 6, 512, 2019, 3400, 52, 9, 2, 21),
 (39, 'APPLE 5', 25000, 2, 256, 2014, 2100, 55, 9, 5, 1),
 (40, 'APPLE 5S', 28000, 2, 512, 2014, 2300, 55, 9, 5, 16),
