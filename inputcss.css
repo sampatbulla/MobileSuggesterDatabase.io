@@ -60,7 +60,7 @@ input[type="file"] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
-input[type="number"]{
+input[type]:not([type=submit]),input[list]{
   width:83%;
 }
 #nav{

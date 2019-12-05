@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insert new Smart Phone</title>
+	<link rel="stylesheet" type="text/css" href="inputcss.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	  	<nav class="" id="nav">
+	  		<a class="navbar-brand" href=""><h2>OneMobile</h2></a>
+	  		<h5 style="color: white;padding-left: 10px;">insert a new smartphone</h5>
+		</nav>
+	<form method="POST" enctype="multipart/form-data" action="inputdb.php" autocomplete ="on" >
+
+<!-- Name: APPLE 11
+Release_year: 2019
+RAM: 6
+Internal Memory: 512
+Battery: 2800
+UI: Ios
+OS: Ios
+Proc Name: a13
+Proc Brand: Apple
+Disp Size: 6.0
+Type of Display: AMOLED
+No of Cameras: 2
+Rear: 12
+Front: 8
+Price: 64000
+Wifi: Yes   Bluetooth: Yes   NFC: Yes   Fingerprint Scanner: No   Face Unlock: Yes -->
+		
+		<div class = "main">
+			<br>
+			<br></div>
+			<div id="input1">
+ 			<label class="attribute">Name: <br><input type="text" name="Name" placeholder="Smart Phone Name" required maxlength ="20">  </label>
+
+			<label class="attribute">RAM: <br><input type="number" name="RAM" placeholder="in GBs" min="1" max="16" required>  </label>
+			
+			<label class="attribute">UI: <br><input type="text" name="UI" placeholder="" required maxlength="18">  </label>
+			<label class="attribute">Processor Name: <br><input type="text" name="Proc_Name" placeholder="" required maxlength="15">  </label>
+			
+			
+			<label class="attribute">Disp Size: <br><input type="text" name="Disp_Size" placeholder="in inches" required>  </label><br>
+			<label class="attribute">Battery: <br><input type="number" name="Battery" placeholder="in mAh" required min="1000" max="5000">  </label>
+			<label class="attribute">Rear Camera Resolution: <br><input type="number" name="Rear" placeholder="in Megapixels" required min="1" max="128">  </label>
+			<label class="attribute">Price: <br><input type="number" name="Price" placeholder="in Rs." required min="100" max="300000">  </label>
+			</div>
+
+			<div id="input2">
+			<label class="attribute2">Year: <br><input type="number" name="Release_year" placeholder="Release Year"  min="1990" max="2019" required>  </label><br>
+			<label class="attribute2">Internal Memory: <br><input list="Internal_Memory" name="Internal_Memory" placeholder="in GBs" required >
+			<datalist id="Internal_Memory">
+ 			 	<option value="8">
+ 				<option value="16">
+  				<option value="32">
+ 			 	<option value="64">
+  				<option value="128">
+  				<option value="256">
+  				<option value="512">
+  				<option value="1024">
+  				<option value="2048">
+			</datalist>
+
+			  </label><br>
+			<label class="attribute2">OS: <br><input type="text" name="OS" placeholder="" required maxlength="10">  </label>
+			
+			<label class="attribute2">Processor Brand: <br><input type="text" name="Proc_Brand" placeholder="" required maxlength="15">  </label><br>
+ 			<label class="attribute2">Type of Display: <br><input type="text" name="Type_of_Display" placeholder="" required maxlength="15">  </label>
+			<label class="attribute2">No of Cameras: <br><input type="number" name="No_of_Cameras" placeholder="" required min="1" max="10">  </label><br>
+			
+			<label class="attribute2">Front Camera Resolution: <br><input type="number" name="Front" placeholder="in Megapixels" required min="1" max="128">  </label><br>
+			
+			</div>
+			<div class="Connectivity" id="Connectivity" >
+
+				<label id="connect">
+				<input type="checkbox" name="conn_input[]" value = "Wifi">Wifi 
+				</label>
+				<label id="connect">
+				<input type="checkbox" name="conn_input[]" value = "Bluetooth">Bluetooth 
+				</label>
+				<label id="connect">
+				<input type="checkbox" name="conn_input[]" value = "NFC">NFC 
+				</label>
+				<label id="connect">
+				<input type="checkbox" name="conn_input[]" value = "Fingerprint_scanner">Fingerprint Scanner 
+				</label>
+				<label id="connect">
+				<input type="checkbox" name="conn_input[]" value = "Face_unlock">Face Unlock 
+				</label>
+
+			</div>
+			<br>
+			<input type="file" id ="fileToUpload" name="fileToUpload" accept="image/*" required="">
+			<br><br><br>
+			<div><input type="submit" name="submit"></div>
+	</form>
+	
+</body>
+</html>
