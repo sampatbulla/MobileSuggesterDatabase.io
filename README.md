@@ -1,4 +1,4 @@
-#Mobile Suggester System
+# Mobile Suggester System
 
 Mobile phones are becoming a primary device of
 every person. Finding A perfect smartphone can be a challenging task for
@@ -12,4 +12,5 @@ focused content, hence limiting the negative effects of information overload.
 Mobile suggester System helps the user to find a right Smartphone of his choice.
 
 You can see the project in the link below:-
+
 http://htmlpreview.github.io/?https://github.com/sampatkumar604/MobileSuggesterDatabase.io/blob/master/index.html
