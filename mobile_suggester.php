@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html class = "mobile_suggester">
 <head>
+
 	<script>
 	function search() {
   	document.getElementById("mobile_suggester_form").submit();
@@ -18,17 +19,27 @@
 	}
 	</script>
 	<style>
-		.error {color: #FF0001;}
-		body{
+		html,
+body {
+  height: 100%;
+  margin: 0
+}
+		.body1{
+			display: flex;
+			flex-flow: column;
 			height: 100%;
 		}
+		.error {color: #FF0001;}
 	#nav{ 
 		border-bottom: 2px solid black;
 		background-color: #111311;
 		color: white;
+		flex: 0 1 auto;
 	}
 	#navbar-example2{
 		border-bottom: 2px solid black;
+		padding: 0px;
+		max-height: 50vh;
 	}
 	h2{
     color: #f35626;
@@ -49,15 +60,14 @@
 }
 	#sidebar{
 		scroll-behavior: auto;
-		border-right:  5px solid ;
-		max-height: 600px;
-		overflow: scroll;
-		min-width: 280px;
-		width:250px;	
+		min-width: 350px;
+		width:250px;
+		overflow: scroll;	
 	}
 	#b{
 		display: flex;
-		height:100%;
+		flex: 1 1 auto;
+		overflow: auto;
 	}
 	#reset{
 		position: relative ;
@@ -77,6 +87,7 @@
 		color: white;
 		padding-top: 10px;
 		padding-left: 30px;
+
 		box-shadow: 0 10px 8px rgba(64 ,64 ,64, .5);
 	}
 	#price{
@@ -109,7 +120,6 @@
 		justify-content: center;
 		color: white;
 		background-color: #151719;
-		
 		padding: 10px 35px;
 	}
 	#border{
@@ -127,6 +137,9 @@
 	iframe{
 		float: right;
 	}
+	.navbar-brand{
+		padding-left: 10px;
+	}
 
 	</style>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -136,10 +149,10 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+	<div class="body1">
 	<nav  id="nav">
-	  <a class="navbar-brand" href=""><h2>Mobile Suggester</h2></a>
-	  <h5>Unbox the best</h5>
+	  <a class="navbar-brand" href=""><h2 style="margin-bottom: 0px;">Mobile Suggester</h2></a>
+	  <h5 style="padding-left: 20px;">Unbox the best</h5>
 	</nav>
 	
 
@@ -194,7 +207,7 @@
 			<input class="btn btn-primary" type="reset"  value="Reset">
 			</label></div>
 			<div oninput="search()" >
-			<select name="priority" id="select">
+			<select name="priority" style="width:80%;" id="select">
 	 			<option value="alpha">a-z</option>
 	  			<option value="lower">cost lower to higher</option>
 	  			<option value="higher">cost higher to lower</option>
@@ -202,15 +215,16 @@
 	  		
 			</select>
 			</div>
-			<label name= "filter" id="search">		
+			<div id="search">
+			<label name= "filter">		
 				<div name = "Search by name" >
-					Search by name:<input type="text" onkeyup = "search()" name="mobile_name_search" placeholder="Mobile name" value="">
+					Search by name:<input type="text" style="width:90%;" onkeyup = "search()" name="mobile_name_search" placeholder="Mobile name" value="">
 				</div><br>
-			</label><br>
+			</label></div><br>
 			<label name= "filter" id="price">
 				<div name = "Price limit">
-					Price <br> Rs.<input type="text"  onkeyup = "verify_and_search()" name="lower_price_limit" value="<?php echo $lower_bound;?>"><br>
-					  Rs.<input type="text" onkeyup = "verify_and_search()" name="higher_price_limit" value="<?php echo $upper_bound;?>">
+					Price <br> Rs.<input type="text"  style="width:90%;" onkeyup = "verify_and_search()" name="lower_price_limit" value="<?php echo $lower_bound;?>"><br>
+					  Rs.<input type="text" style="width:90%;" onkeyup = "verify_and_search()" name="higher_price_limit" value="<?php echo $upper_bound;?>">
 					 <span class = "error" id= "invalid_input"></span><br>
 				</div>
 			</label>
@@ -408,7 +422,8 @@
 	</div>
 	</div>
 
-	<iframe name = "suggester" style="border:none;max-height:600px;width:85.5%" src="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>"></iframe>
+	<iframe name = "suggester" style="border:none;width:100%" src="<?php echo htmlspecialchars(dirname($_SERVER['REQUEST_URI'])."/myphp1.php");?>" height="100%"></iframe>
 	</div>
+</div>
 </body>
 </html>
