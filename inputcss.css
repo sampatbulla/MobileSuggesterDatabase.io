@@ -11,7 +11,7 @@ body{
 }
 .main::before{
 	color:red;
-	content:"* required";
+	content:"*required";
 	white-space: pre;
 	margin:auto;
 }

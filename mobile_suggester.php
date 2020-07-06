@@ -40,6 +40,7 @@ body {
 		border-bottom: 2px solid black;
 		padding: 0px;
 		max-height: 50vh;
+		font-size:0.7em;
 	}
 	h2{
     color: #f35626;
@@ -60,9 +61,9 @@ body {
 }
 	#sidebar{
 		scroll-behavior: auto;
-		min-width: 350px;
-		width:250px;
-		overflow: scroll;	
+		width:400px;
+		overflow: scroll;
+		overflow-x: hidden;	
 	}
 	#b{
 		display: flex;

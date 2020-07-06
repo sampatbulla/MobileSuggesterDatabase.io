@@ -1,3 +1,48 @@
+<style type="text/css">
+	.main{
+		background-color: #f1f1f1;
+		margin: 40px 0px;
+		padding:20px 0px;
+		width: auto;
+	}
+	
+	.description{
+		margin-left: 40px;
+		display: grid;
+		grid-template-columns:  repeat(2,1fr);
+		grid-gap: 0.5em;
+		max-width: 1000px;
+	}
+	.main img{
+		
+		float: left;
+		padding: 35px;
+		height: 300px;
+	}
+	p{
+		
+		line-height: 1.3;
+		font-size: 0.9em;
+	}
+	.last{
+		display: grid;
+		grid-auto-flow: column;
+		grid-gap: 0px;
+		grid-template-columns:  repeat(5,minmax(40px,80px));
+		margin-left: 250px;
+	}
+	.last img{
+		
+		height: 40px;
+		width: 40px;
+	}
+	.price{
+		display: block;
+		font-size: 1.5em;
+		margin: 20px;
+		margin-left:250px;
+	}
+</style>
 <?php 
 
 $mobile_name_search = $order = "";
@@ -127,9 +172,9 @@ $sql = "SELECT SM.S_id,Smartphone_name as 'Smartphone Name' ,Ram, Storage, Relea
 	;
 function check($param) {
   if($param == 1){
-  return "Yes";
+  return "";
   } else {
-  	return "No";
+  	return "hidden";
   }
 }
 
@@ -140,29 +185,30 @@ if ($result->num_rows > 0) {
 	echo "<p style='color:white; background:blue;padding-left:45%;'>".$result->num_rows." results found.</p>";
     while($row = $result->fetch_assoc()) {
         echo 
-        "<p >".
-        "<img style='float:left;padding-left:10px;padding-top:60px;' src='".htmlspecialchars(dirname($_SERVER['REQUEST_URI']))."/image/".$row["S_id"]."'><p style='padding-left:200px;background:#151719; color:white;padding-top:10px;padding-bottom:10px;'>".
-        "Name: " . $row["Smartphone Name"]."<br>".
-        "Release year: ".$row["Year"]."<br>".
-        "RAM: ".$row["Ram"]." GB<br>".
-        "Internal Memory: ".$row["Storage"]." GB<br>".
-        "Battery: ".$row["Battery"]." mAH<br>".
-        "UI: ".$row["UI"]."<br>".
-        "OS: ".$row["OS"]."<br>".
-        "Proc Name: ".$row["Proc Name"]."<br>".
-        "Proc Brand: ".$row["Proc Brand"]."<br>".
-        "Disp Size: ".$row["Disp Size"]." inches<br>".
-        "Type of Display: ".$row["Type of Display"]."<br>".
-        "No of Cameras: ".$row["No of Cameras"]."<br>".
-        "Rear: ".$row["Rear"]." MP<br>".
-        "Front: ".$row["Front"]." MP<br>".
-        "Price:Rs. ".$row["Price"]."<br>".
-        "Wifi: ".check($row["Wifi"])."  &nbsp&nbsp".//&nbsp adds extra space in html
-        "Bluetooth: ".check($row["Bluetooth"])." &nbsp&nbsp".
-        "NFC: ".check($row["NFC"])." &nbsp&nbsp".
-        "Fingerprint Scanner: ".check($row["FPS"])." &nbsp&nbsp".
-        "Face Unlock: ".check($row["FU"])."<br>".
-        "</p></p><br><hr>";
+        "<div class =\"main\">".
+        "<img src='".htmlspecialchars(dirname($_SERVER['REQUEST_URI']))."/image/".$row["S_id"]."'><div class=\"description\">".
+        "<div>"."Name: " . $row["Smartphone Name"]."</div>".
+        "<div>"."Release year: ".$row["Year"]."</div>".
+        "<div>"."RAM: ".$row["Ram"]." GB</div>".
+        "<div>"."Internal Memory: ".$row["Storage"]." GB</div>".
+        "<div>"."Battery: ".$row["Battery"]." mAH</div>".
+        "<div>"."UI: ".$row["UI"]."</div>".
+        "<div>"."OS: ".$row["OS"]."</div>".
+        "<div>"."Proc Name: ".$row["Proc Name"]."</div>".
+        "<div>"."Proc Brand: ".$row["Proc Brand"]."</div>".
+        "<div>"."Disp Size: ".$row["Disp Size"]." inches</div>".
+        "<div>"."Type of Display: ".$row["Type of Display"]."</div>".
+        "<div>"."No of Cameras: ".$row["No of Cameras"]."</div>".
+        "<div>"."Rear: ".$row["Rear"]." MP</div>".
+        "<div>"."Front: ".$row["Front"]." MP</div>"."</div>".
+        "<div class = \"price\">"."Price: Rs. ".$row["Price"]."</div>".
+        "<div class=\"last\">
+        <div ".check($row["Wifi"])."><img class=\"icons\" title=\"wifi\" src= \"".htmlspecialchars(dirname($_SERVER['REQUEST_URI']))."/wifi.svg\""."></div>".
+        "<div ".check($row["FPS"])."><img class=\"icons\" title=\"Fingerprint Scanner\" src= \"".htmlspecialchars(dirname($_SERVER['REQUEST_URI']))."/fingerprint_scanner.svg\""."></div>".
+        "<div ".check($row["Bluetooth"])."><img class=\"icons\" title=\"Bluetooth\" src= \"".htmlspecialchars(dirname($_SERVER['REQUEST_URI']))."/bluetooth.svg\""."></div>".
+        "<div ".check($row["NFC"])."><img class=\"icons\" title=\"NFC\" src= \"".htmlspecialchars(dirname($_SERVER['REQUEST_URI']))."/nfc.svg\""."></div>".
+        "<div ".check($row["FU"])."><img class=\"icons\" title=\"Face Unlock\" src= \"".htmlspecialchars(dirname($_SERVER['REQUEST_URI']))."/face_unlock.jpg\""."></div>".
+        "</div></div><hr>";
     }
 } else {
     echo "No results found!";
