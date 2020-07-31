@@ -1,0 +1,12 @@
+runtime: php
+env: flex
+runtime_config:
+  document: .
+env_variables:
+  APP_LOG: errorlog
+  GOOGLE_STORAGE_BUCKET: "mobilesuggester.appspot.com"
+  MYSQL_USER: "**"
+  MYSQL_PASSWORD: "**"
+  MYSQL_DSN: "mysql:dbname=MOBILE_SUGGESTER_DB;unix_socket=/cloudsql/mobilesuggester:us-central1:mobile-suggester"
+  beta_settings:
+  cloud_sql_instances: mobilesuggester:us-central1:mobile-suggester
