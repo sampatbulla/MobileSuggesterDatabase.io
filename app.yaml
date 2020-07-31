@@ -1,7 +1,7 @@
 runtime: php
 env: flex
 runtime_config:
-  document: .
+  document_root: .
 env_variables:
   APP_LOG: errorlog
   GOOGLE_STORAGE_BUCKET: "mobilesuggester.appspot.com"
