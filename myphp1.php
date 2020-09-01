@@ -73,8 +73,8 @@ function test_input($data) {
   return $data;
 }
 $servername = "localhost";
-$username = "root";
-$password = "Mysql@3q#";
+$username = "your_username";
+$password = "your_password";
 $dbname = "MOBILE_SUGGESTER_DB";
 
 // Create connection
